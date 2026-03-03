@@ -15,7 +15,7 @@ export function clearToken() {
 
 export async function login(username, password) {
   // Compatible con simplejwt (/api/auth/token/) y DRF TokenAuth (/api/auth/login/)
-  const res = await fetch(`${BASE_URL}/api/auth/token/`, {
+  const res = await fetch(`${BASE_URL}/api/login/`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password }),
